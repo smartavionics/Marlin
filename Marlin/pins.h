@@ -759,12 +759,13 @@
   #ifdef ULTRA_LCD
 
     #ifdef NEWPANEL
-      #define LCD_PINS_RS 16
-      #define LCD_PINS_ENABLE 17
-      #define LCD_PINS_D4 23
-      #define LCD_PINS_D5 25
-      #define LCD_PINS_D6 27
-      #define LCD_PINS_D7 29
+      //Changes made for the PanelOne
+      #define LCD_PINS_RS 40 //AUX2 PIN 6
+      #define LCD_PINS_ENABLE 42 //AUX2 PIN 8
+      #define LCD_PINS_D4 65 //AUX2 PIN 10
+      #define LCD_PINS_D5 66 //AUX2 PIN 9
+      #define LCD_PINS_D6 44 //AUX2 PIN 7
+      #define LCD_PINS_D7 64 //AUX2 PIN 5
 
       #ifdef REPRAP_DISCOUNT_SMART_CONTROLLER
         #define BEEPER 37
@@ -800,9 +801,9 @@
           #define SHIFT_CLK 44 // shift register
           #define SHIFT_LD 42 // shift register
         #else
-          #define BTN_EN1 37
-          #define BTN_EN2 35
-          #define BTN_ENC 31  //the click
+          #define BTN_EN1 59
+          #define BTN_EN2 63
+          #define BTN_ENC 49
         #endif
 
         #ifdef G3D_PANEL
