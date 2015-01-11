@@ -132,7 +132,7 @@
 #define TEMP_SENSOR_0 7 // T3P3 1.75mm J-head with Honeywell thermistor
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 0 //11 // T3P3 alu heatbed with Kapton heater and 3950 thermistor
+#define TEMP_SENSOR_BED 11 // T3P3 alu heatbed with Kapton heater and 3950 thermistor
 
 // This makes temp sensor 1 a redundant sensor for sensor 0. If the temperatures difference between these sensors is to high the print will be aborted.
 //#define TEMP_SENSOR_1_AS_REDUNDANT
@@ -285,8 +285,8 @@ your extruder heater takes 2 minutes to hit the target on heating.
 // uncomment the 2 defines below:
 
 // Parameters for the bed heater
-//#define THERMAL_RUNAWAY_PROTECTION_BED_PERIOD 20 //in seconds
-//#define THERMAL_RUNAWAY_PROTECTION_BED_HYSTERESIS 2 // in degree Celsius
+#define THERMAL_RUNAWAY_PROTECTION_BED_PERIOD 20 //in seconds
+#define THERMAL_RUNAWAY_PROTECTION_BED_HYSTERESIS 2 // in degree Celsius
 //===========================================================================
 
 
@@ -506,7 +506,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 250 // For delta: Distance between nozzle and print surface after homing.
-#define MANUAL_Z_HOME_POS 248.75 // mb - 0.25 above glass, no tape, cold
+//#define MANUAL_Z_HOME_POS 248.75 // mb - 0.25 above glass, no tape, cold
+#define MANUAL_Z_HOME_POS (248.75-12.4) // mb - 0.3 above glass, no tape, cold, heated bed in place
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
