@@ -77,7 +77,7 @@
 // NOTE NB all values for DELTA_* values MOUST be floating point, so always have a decimal point in them
 
 // Center-to-center distance of the holes in the diagonal push rods.
-#define DELTA_DIAGONAL_ROD 212.75 // mm (mb)
+#define DELTA_DIAGONAL_ROD (212.75*0.995) // mm (mb)
 
 // Horizontal offset from middle of printer to smooth rod center.
 #define DELTA_SMOOTH_ROD_OFFSET 145.0 // mm (t3p3)
@@ -89,7 +89,7 @@
 #define DELTA_CARRIAGE_OFFSET 19.5 // mm (t3p3)
 
 // Effective horizontal distance bridged by diagonal push rods.
-#define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET-1.0) // (mb)
+#define DELTA_RADIUS ((DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET-1.0)*0.995) // (mb)
 
 //===========================================================================
 //=============================Thermal Settings  ============================
@@ -507,7 +507,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_Y_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 250 // For delta: Distance between nozzle and print surface after homing.
 //#define MANUAL_Z_HOME_POS 248.75 // mb - 0.25 above glass, no tape, cold
-#define MANUAL_Z_HOME_POS (248.75-12.4) // mb - 0.3 above glass, no tape, cold, heated bed in place
+#define MANUAL_Z_HOME_POS 236.15 // mb - 0.25 above glass, no tape, cold, heated bed in place
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
