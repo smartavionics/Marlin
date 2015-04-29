@@ -507,7 +507,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_Y_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 250 // For delta: Distance between nozzle and print surface after homing.
 //#define MANUAL_Z_HOME_POS 248.75 // mb - 0.25 above glass, no tape, cold
-#define MANUAL_Z_HOME_POS 236.15 // mb - 0.25 above glass, no tape, cold, heated bed in place
+#define MANUAL_Z_HOME_POS 235.35 // mb - 0.25 above glass, no tape, cold, (200mm) heated bed in place
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
